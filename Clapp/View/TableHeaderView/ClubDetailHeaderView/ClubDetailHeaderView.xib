@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClubDetailHeaderView" rowHeight="395" id="KGk-i7-Jjw" customClass="ClubDetailHeaderView" customModule="Clapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="239"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="238.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ic_launcher_round" translatesAutoresizingMaskIntoConstraints="NO" id="L3H-fY-hDX">
+                        <rect key="frame" x="16" y="42" width="96" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="Nez-qM-zr0"/>
+                            <constraint firstAttribute="width" secondItem="L3H-fY-hDX" secondAttribute="height" multiplier="1:1" id="wWn-gk-9lC"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-R1-9nx" userLabel="Information Stack">
+                        <rect key="frame" x="128" y="16" width="176" height="147"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDc-VW-d3E">
+                                <rect key="frame" x="0.0" y="0.0" width="176" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Members: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b79-zE-gyv">
+                                <rect key="frame" x="0.0" y="43.5" width="176" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Events: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWe-eg-0tC">
+                                <rect key="frame" x="0.0" y="86.5" width="176" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H3-Jr-xcn">
+                                <rect key="frame" x="0.0" y="130" width="176" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XcZ-ti-x2q">
+                        <rect key="frame" x="16" y="195" width="288" height="29"/>
+                        <segments>
+                            <segment title="List"/>
+                            <segment title="Calendar"/>
+                        </segments>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XcZ-ti-x2q" firstAttribute="trailing" secondItem="4xu-R1-9nx" secondAttribute="trailing" id="2Sj-qv-xBz"/>
+                    <constraint firstItem="L3H-fY-hDX" firstAttribute="centerY" secondItem="4xu-R1-9nx" secondAttribute="centerY" id="N6h-0y-0Wr"/>
+                    <constraint firstItem="XcZ-ti-x2q" firstAttribute="leading" secondItem="L3H-fY-hDX" secondAttribute="leading" id="O7U-3t-saf"/>
+                    <constraint firstItem="4xu-R1-9nx" firstAttribute="leading" secondItem="L3H-fY-hDX" secondAttribute="trailing" constant="16" id="WDd-16-tXX"/>
+                    <constraint firstItem="XcZ-ti-x2q" firstAttribute="top" secondItem="4xu-R1-9nx" secondAttribute="bottom" constant="32" id="kA3-MH-Xwh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="XcZ-ti-x2q" secondAttribute="bottom" constant="16" id="3WH-ho-6Te"/>
+                <constraint firstItem="4xu-R1-9nx" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="16" id="9JV-yI-nrf"/>
+                <constraint firstItem="L3H-fY-hDX" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="16" id="IFE-Ox-hXI"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="4xu-R1-9nx" secondAttribute="trailing" constant="16" id="JPU-M1-hjc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="clubFollowersCountLabel" destination="bDc-VW-d3E" id="eSw-iC-hOL"/>
+                <outlet property="clubIcon" destination="L3H-fY-hDX" id="xqV-aV-1Dw"/>
+                <outlet property="clubMembersCountLabel" destination="b79-zE-gyv" id="mBC-pa-xkD"/>
+                <outlet property="clubTotalEventsCountLabel" destination="jWe-eg-0tC" id="rPL-ZP-nlv"/>
+                <outlet property="clubUpcomingEventsLabel" destination="0H3-Jr-xcn" id="Qy3-D5-A2W"/>
+                <outlet property="segmentedControl" destination="XcZ-ti-x2q" id="snT-8M-lnr"/>
+            </connections>
+            <point key="canvasLocation" x="123" y="180.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_launcher_round" width="48" height="48"/>
+    </resources>
+</document>
